@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace WeatherApp
 {
+    // This class holds all the data models that match the structure of the JSON returned by the weather API
     internal class WeatherInfo
     {
+        
         public class coord
         {
             public double lon { get; set; }
@@ -20,6 +22,7 @@ namespace WeatherApp
             public string description { get; set; }
             public string icon { get; set; }
         }
+        // The main class holds the temperature, pressure, and humidity data
         public class main
         {
             public double temp { get; set; }
@@ -27,6 +30,7 @@ namespace WeatherApp
             public double humidity { get; set; }
 
         }
+        // The wind class holds the wind speed data
         public class wind
         {
             public double speed { get; set; }
@@ -36,6 +40,7 @@ namespace WeatherApp
             public long sunrise { get; set; }
             public long sunset { get; set; }
         }
+        // The root class holds all the data returned by the API
         public class root
         {
             public coord coord { get; set; }
