@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,14 +49,15 @@ namespace WeatherApp
                 // label or box initialization to display the weather information 
                 lab_condtion.Text = "Conditions: "+ Info.weather[0].main;
                 lab_detail.Text = "Detail: " + Info.weather[0].description;
-                lab_temp.Text = "Temperature: " + Info.main.temp + " °C";
+                lab_temp.Text = "Temperature: " + Info.main.temp + " °F";
                 lab_sunset.Text = ConvertUnixToTimeString(Info.sys.sunset).ToString();
                 lab_sunrise.Text = ConvertUnixToTimeString(Info.sys.sunrise).ToString();
                 lab_windspeed.Text = Info.wind.speed.ToString() +  " mph";
+                lab2.Text = "Humidity: " + Info.main.humidity.ToString() + "%";
+                lab4.Text = "Wind: "  + Info.wind.speed.ToString() + "mph";
 
                 //Converting hPa or hectopascals into inHg or inches of mercury
                 lab_pressure.Text = (Info.main.pressure * 0.02953).ToString("0.00")+" inHg";
-
 
             }
 
@@ -101,6 +102,21 @@ namespace WeatherApp
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pic_icon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lab2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
